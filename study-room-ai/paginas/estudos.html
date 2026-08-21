@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>♡ Study Room — Estudos ♡</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="site">
+
+        <header>
+
+            <h1>♡ Study Room ♡</h1>
+
+            <p>minha biblioteca de estudos</p>
+
+        </header>
+
+
+        <nav>
+
+            <a href="../index.html">🏠 início</a>
+
+            <a href="estudos.html">📚 estudos</a>
+
+            <a href="ia.html">🤖 minha IA</a>
+
+            <a href="#">📝 anotações</a>
+
+            <a href="#">⏰ pomodoro</a>
+
+        </nav>
+
+
+        <main>
+
+            <!-- APRESENTAÇÃO -->
+
+            <section class="welcome">
+
+                <h2>📚 Meus estudos</h2>
+
+                <p>
+                    Todos os meus cursos, aulas e materiais ♡
+                </p>
+
+            </section>
+
+
+            <!-- PESQUISA -->
+
+            <div class="study-search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔎 Procurar curso, matéria ou material..."
+                >
+
+            </div>
+
+
+            <!-- ADICIONAR MATERIAL -->
+
+            <div class="add-study">
+
+                <button id="showFormButton">
+                    ＋ Adicionar material ♡
+                </button>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <section
+                class="study-form"
+                id="studyForm"
+                style="display: none;"
+            >
+
+                <h2>♡ Novo material ♡</h2>
+
+                <input
+                    type="text"
+                    id="materialName"
+                    placeholder="Nome do material"
+                >
+
+                <select id="materialCategory">
+
+                    <option value="curso">
+                        🎓 Curso
+                    </option>
+
+                    <option value="aula">
+                        ▶️ Aula
+                    </option>
+
+                    <option value="material">
+                        📄 Material
+                    </option>
+
+                    <option value="questoes">
+                        📝 Questões
+                    </option>
+
+                    <option value="outros">
+                        🔗 Outros
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="text"
+                    id="materialSubject"
+                    placeholder="Matéria (ex: Matemática)"
+                >
+
+
+                <input
+                    type="url"
+                    id="materialLink"
+                    placeholder="Link do site"
+                >
+
+
+                <div class="form-buttons">
+
+                    <button id="saveMaterialButton">
+                        💾 Salvar ♡
+                    </button>
+
+                    <button id="cancelFormButton">
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- MEUS MATERIAIS ADICIONADOS -->
+
+            <section
+                class="study-section"
+                id="customMaterialsSection"
+            >
+
+                <h2>🌷 Meus materiais</h2>
+
+                <div id="customMaterials">
+
+                    <!-- Os materiais adicionados aparecerão aqui -->
+
+                </div>
+
+            </section>
+
+
+            <!-- CURSOS -->
+
+            <section class="study-section">
+
+                <h2>🎓 Cursos e aulas</h2>
+
+
+                <div class="study-card">
+
+                    <h3>📕 Português</h3>
+
+                    <p>
+                        Curso de Português para meus estudos.
+                    </p>
+
+                    <a
+                        href="COLOQUE-O-LINK-AQUI"
+                        target="_blank"
+                    >
+
+                        <button>
+                            Abrir curso ♡
+                        </button>
+
+                    </a>
+
+                </div>
+
+
+                <div class="study-card">
+
+                    <h3>📘 Matemática</h3>
+
+                    <p>
+                        Aulas e conteúdos de Matemática.
+                    </p>
+
+                    <a
+                        href="COLOQUE-O-LINK-AQUI"
+                        target="_blank"
+                    >
+
+                        <button>
+                            Abrir curso ♡
+                        </button>
+
+                    </a>
+
+                </div>
+
+
+                <div class="study-card">
+
+                    <h3>🌎 História</h3>
+
+                    <p>
+                        Aulas de História.
+                    </p>
+
+                    <a
+                        href="COLOQUE-O-LINK-AQUI"
+                        target="_blank"
+                    >
+
+                        <button>
+                            Abrir curso ♡
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- MATERIAIS -->
+
+            <section class="study-section">
+
+                <h2>📄 Materiais</h2>
+
+
+                <div class="study-card">
+
+                    <h3>📎 Apostila de Matemática</h3>
+
+                    <p>
+                        Material para revisar Matemática.
+                    </p>
+
+                    <a
+                        href="COLOQUE-O-LINK-AQUI"
+                        target="_blank"
+                    >
+
+                        <button>
+                            Abrir material ♡
+                        </button>
+
+                    </a>
+
+                </div>
+
+
+                <div class="study-card">
+
+                    <h3>📎 Apostila de Português</h3>
+
+                    <p>
+                        Material de revisão.
+                    </p>
+
+                    <a
+                        href="COLOQUE-O-LINK-AQUI"
+                        target="_blank"
+                    >
+
+                        <button>
+                            Abrir material ♡
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>♡ minha pequena biblioteca de estudos ♡</p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="../js/estudos.js"></script>
+
+</body>
+
+</html>
