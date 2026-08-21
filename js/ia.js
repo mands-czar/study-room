@@ -27,15 +27,17 @@ ${pergunta}`;
 
     navigator.clipboard.writeText(prompt)
         .then(() => {
+
             window.open("https://chatgpt.com/", "_blank");
 
             alert(
                 "♡ Prompt preparado!\n\n" +
                 "Sua pergunta foi copiada.\n\n" +
-                "No ChatGPT, é só apertar Ctrl + V e enviar!"
+                "No ChatGPT, aperte Ctrl + V e envie!"
             );
 
             input.value = "";
+
         })
         .catch(() => {
 
@@ -44,5 +46,18 @@ ${pergunta}`;
             alert(
                 "♡ Abra o ChatGPT e cole sua pergunta com Ctrl + V."
             );
+
         });
 }
+
+
+/* Pressionar ENTER envia a pergunta */
+
+document.getElementById("user-input").addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+        event.preventDefault();
+        perguntarChatGPT();
+    }
+
+});
