@@ -1,9 +1,134 @@
 
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha IA — Amanda's Study Room</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        /* ÁREA DA IA */
+
+        .ai-page {
+            max-width: 850px;
+            margin: 40px auto;
+        }
+
+
+        .ai-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        .ai-header h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .chat-container {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+
+        .chat-box {
+            min-height: 400px;
+            max-height: 550px;
+            overflow-y: auto;
+            padding: 25px;
+        }
+
+
+        .message {
+            max-width: 75%;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border-radius: 16px;
+            line-height: 1.5;
+        }
+
+
+        .message p {
+            margin: 6px 0 0;
+        }
+
+
+        .message.ai {
+            margin-right: auto;
+            background: #f4f0f2;
+        }
+
+
+        .message.user {
+            margin-left: auto;
+            background: #eee3e8;
+        }
+
+
+        .chat-input-area {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 13px 15px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+        }
+
+
+        .chat-input-area button {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+
+        .chat-input-area button:hover {
+            opacity: 0.85;
+        }
+
+
+        .chat-help {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 15px;
+            opacity: 0.7;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="site">
+
+
         <header>
 
-            <h1>Study Room</h1>
+            <h1>Amanda's Study Room</h1>
 
-            <p>minha biblioteca de estudos</p>
+            <p>minha professora virtual</p>
 
         </header>
 
@@ -26,243 +151,69 @@
         <main>
 
 
-            <!-- APRESENTAÇÃO -->
-
-            <section class="welcome">
-
-                <h2>Meus estudos</h2>
-
-                <p>
-                    Todos os meus cursos, aulas e materiais.
-                </p>
-
-            </section>
+            <section class="ai-page">
 
 
-            <!-- PESQUISA -->
+                <div class="ai-header">
 
-            <section class="study-search">
+                    <h2>Minha IA</h2>
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Procurar curso, matéria ou material..."
-                >
-
-            </section>
-
-
-            <!-- ADICIONAR MATERIAL -->
-
-            <section class="add-study">
-
-                <button
-                    type="button"
-                    id="showFormButton"
-                >
-                    adicionar material
-                </button>
-
-            </section>
-
-
-            <!-- FORMULÁRIO -->
-
-            <section
-                class="study-form"
-                id="studyForm"
-                style="display: none;"
-            >
-
-                <h2>Novo material</h2>
-
-
-                <input
-                    type="text"
-                    id="materialName"
-                    placeholder="Nome do material"
-                >
-
-
-                <select id="materialCategory">
-
-                    <option value="curso">
-                        Curso
-                    </option>
-
-                    <option value="aula">
-                        Aula
-                    </option>
-
-                    <option value="material">
-                        Material
-                    </option>
-
-                    <option value="questoes">
-                        Questões
-                    </option>
-
-                    <option value="outros">
-                        Outros
-                    </option>
-
-                </select>
-
-
-                <input
-                    type="text"
-                    id="materialSubject"
-                    placeholder="Matéria"
-                >
-
-
-                <input
-                    type="url"
-                    id="materialLink"
-                    placeholder="Link do material"
-                >
-
-
-                <div class="form-buttons">
-
-                    <button
-                        type="button"
-                        id="saveMaterialButton"
-                    >
-                        salvar
-                    </button>
-
-
-                    <button
-                        type="button"
-                        id="cancelFormButton"
-                    >
-                        cancelar
-                    </button>
+                    <p>
+                        Sua professora particular para os estudos.
+                    </p>
 
                 </div>
 
-            </section>
+
+                <div class="chat-container">
 
 
-            <!-- MATERIAIS PERSONALIZADOS -->
-
-            <section
-                class="study-section"
-                id="customMaterialsSection"
-            >
-
-                <h2>Meus materiais</h2>
-
-                <div id="customMaterials"></div>
-
-            </section>
-
-
-            <!-- CURSOS -->
-
-            <section class="study-section">
-
-                <h2>Cursos e aulas</h2>
-
-
-                <article class="study-card">
-
-                    <h3>Português</h3>
-
-                    <p>
-                        Curso de Português para meus estudos.
-                    </p>
-
-                    <button
-                        type="button"
-                        disabled
+                    <div
+                        id="chat-box"
+                        class="chat-box"
                     >
-                        link em breve
-                    </button>
 
-                </article>
+                        <div class="message ai">
 
+                            <strong>IA</strong>
 
-                <article class="study-card">
+                            <p>
+                                Oi! Estou pronta para ajudar
+                                nos seus estudos.
+                            </p>
 
-                    <h3>Matemática</h3>
+                        </div>
 
-                    <p>
-                        Aulas e conteúdos de Matemática.
-                    </p>
-
-                    <button
-                        type="button"
-                        disabled
-                    >
-                        link em breve
-                    </button>
-
-                </article>
+                    </div>
 
 
-                <article class="study-card">
+                    <div class="chat-input-area">
 
-                    <h3>História</h3>
-
-                    <p>
-                        Aulas de História.
-                    </p>
-
-                    <button
-                        type="button"
-                        disabled
-                    >
-                        link em breve
-                    </button>
-
-                </article>
-
-            </section>
+                        <input
+                            type="text"
+                            id="user-input"
+                            placeholder="Digite sua dúvida..."
+                            autocomplete="off"
+                        >
 
 
-            <!-- MATERIAIS -->
+                        <button
+                            type="button"
+                            onclick="perguntarChatGPT()"
+                        >
+                            perguntar
+                        </button>
 
-            <section class="study-section">
+                    </div>
 
-                <h2>Materiais</h2>
-
-
-                <article class="study-card">
-
-                    <h3>Apostila de Matemática</h3>
-
-                    <p>
-                        Material para revisar Matemática.
-                    </p>
-
-                    <button
-                        type="button"
-                        disabled
-                    >
-                        link em breve
-                    </button>
-
-                </article>
+                </div>
 
 
-                <article class="study-card">
+                <p class="chat-help">
+                    Ao enviar, sua pergunta será preparada
+                    e você continuará a conversa no ChatGPT.
+                </p>
 
-                    <h3>Apostila de Português</h3>
-
-                    <p>
-                        Material de revisão.
-                    </p>
-
-                    <button
-                        type="button"
-                        disabled
-                    >
-                        link em breve
-                    </button>
-
-                </article>
 
             </section>
 
@@ -273,7 +224,7 @@
         <footer>
 
             <p>
-                minha pequena biblioteca de estudos
+                sua pequena sala de estudos
             </p>
 
         </footer>
@@ -282,7 +233,7 @@
     </div>
 
 
-    <script src="../js/estudos.js"></script>
+    <script src="../js/ia.js"></script>
 
 </body>
 
