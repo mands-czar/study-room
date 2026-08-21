@@ -387,4 +387,11 @@ footer {
     border-radius: 12px;
     cursor: pointer;
     font-family: inherit;
+}.study-decoration {
+    display: block;
+    width: 280px;
+    max-width: 80%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 15px;
 }
