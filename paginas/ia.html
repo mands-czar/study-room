@@ -1,123 +1,16 @@
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Minha IA — Amanda's Study Room</title>
+    <title>Study Room — Minha IA</title>
 
     <link rel="stylesheet" href="../css/style.css">
 
-    <style>
-
-        /* ÁREA DA IA */
-
-        .ai-page {
-            max-width: 850px;
-            margin: 40px auto;
-        }
-
-
-        .ai-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-
-        .ai-header h2 {
-            margin-bottom: 10px;
-        }
-
-
-        .chat-container {
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-            background: white;
-        }
-
-
-        .chat-box {
-            min-height: 400px;
-            max-height: 550px;
-            overflow-y: auto;
-            padding: 25px;
-        }
-
-
-        .message {
-            max-width: 75%;
-            padding: 14px 18px;
-            margin-bottom: 18px;
-            border-radius: 16px;
-            line-height: 1.5;
-        }
-
-
-        .message p {
-            margin: 6px 0 0;
-        }
-
-
-        .message.ai {
-            margin-right: auto;
-            background: #f4f0f2;
-        }
-
-
-        .message.user {
-            margin-left: auto;
-            background: #eee3e8;
-        }
-
-
-        .chat-input-area {
-            display: flex;
-            gap: 10px;
-            padding: 15px;
-            border-top: 1px solid #ddd;
-        }
-
-
-        .chat-input-area input {
-            flex: 1;
-            padding: 13px 15px;
-            border: 1px solid #ccc;
-            border-radius: 12px;
-            font-size: 15px;
-            outline: none;
-        }
-
-
-        .chat-input-area button {
-            padding: 13px 20px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-
-        .chat-input-area button:hover {
-            opacity: 0.85;
-        }
-
-
-        .chat-help {
-            text-align: center;
-            font-size: 13px;
-            margin-top: 15px;
-            opacity: 0.7;
-        }
-
-    </style>
-
 </head>
-
 
 <body>
 
@@ -126,97 +19,83 @@
 
         <header>
 
-            <h1>Amanda's Study Room</h1>
+            <h1>Study Room</h1>
 
             <p>minha professora virtual</p>
 
         </header>
 
 
-        <!-- MENU -->
-
         <nav class="main-nav">
 
-            <a href="../index.html">início</a>
+    <a href="../index.html">início</a>
 
-            <a href="estudos.html">estudos</a>
+    <a href="estudos.html">estudos</a>
 
-            <a href="ia.html">minha IA</a>
+    <a href="checklist.html">checklist</a>
 
-            <a href="modo-foco.html">modo foco</a>
+    <a href="ia.html">minha IA</a>
 
-        </nav>
+    <a href="modo-foco.html">modo foco</a>
+
+</nav>
 
 
         <main>
 
+            <section class="chat">
 
-            <section class="ai-page">
 
-
-                <div class="ai-header">
+                <div class="chat-title">
 
                     <h2>Minha IA</h2>
 
                     <p>
-                        Sua professora particular para os estudos.
+                        Pergunte qualquer coisa sobre seus estudos.
                     </p>
 
                 </div>
 
 
-                <div class="chat-container">
+                <div
+                    id="chat-box"
+                    class="chat-box"
+                >
 
+                    <div class="message ai">
 
-                    <div
-                        id="chat-box"
-                        class="chat-box"
-                    >
+                        <strong>IA:</strong>
 
-                        <div class="message ai">
-
-                            <strong>IA</strong>
-
-                            <p>
-                                Oi! Estou pronta para ajudar
-                                nos seus estudos.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="chat-input-area">
-
-                        <input
-                            type="text"
-                            id="user-input"
-                            placeholder="Digite sua dúvida..."
-                            autocomplete="off"
-                        >
-
-
-                        <button
-                            type="button"
-                            onclick="perguntarChatGPT()"
-                        >
-                            perguntar
-                        </button>
+                        <p>
+                            Oi! Eu sou sua assistente de estudos.
+                            O que você gostaria de aprender hoje?
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <p class="chat-help">
-                    Ao enviar, sua pergunta será preparada
-                    e você continuará a conversa no ChatGPT.
-                </p>
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Digite sua dúvida..."
+                    >
+
+
+                    <button
+                        type="button"
+                        onclick="perguntarChatGPT()"
+                    >
+                        perguntar
+                    </button>
+
+                </div>
 
 
             </section>
-
 
         </main>
 
@@ -228,7 +107,6 @@
             </p>
 
         </footer>
-
 
     </div>
 
