@@ -407,10 +407,10 @@ footer {
 }
 
 .study-decoration {
-    width: 850px;
+    width: 650px;
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 10px;
 }
