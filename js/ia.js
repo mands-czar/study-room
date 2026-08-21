@@ -1,26 +1,18 @@
-unction perguntarChatGPT() {
+function perguntarChatGPT() {
 
     const input = document.getElementById("user-input");
-
     const pergunta = input.value.trim();
 
-
     if (pergunta === "") {
-
-        input.focus();
-
+        alert("Digite sua dúvida primeiro! ♡");
         return;
-
     }
 
-
-    const prompt = `
-Você é minha professora particular de estudos.
+    const prompt = `Você é minha professora particular de estudos.
 
 Explique minha dúvida de forma simples e didática, começando do zero quando necessário.
 
 Regras:
-
 - Use linguagem fácil de entender.
 - Explique passo a passo.
 - Dê exemplos do cotidiano.
@@ -31,39 +23,26 @@ Regras:
 
 Minha dúvida é:
 
-${pergunta}
-`;
-
+${pergunta}`;
 
     navigator.clipboard.writeText(prompt)
         .then(() => {
+            window.open("https://chatgpt.com/", "_blank");
 
-            window.open(
-                "https://chatgpt.com/",
-                "_blank"
+            alert(
+                "♡ Prompt preparado!\n\n" +
+                "Sua pergunta foi copiada.\n\n" +
+                "No ChatGPT, é só apertar Ctrl + V e enviar!"
             );
 
+            input.value = "";
         })
         .catch(() => {
 
-            window.open(
-                "https://chatgpt.com/",
-                "_blank"
+            window.open("https://chatgpt.com/", "_blank");
+
+            alert(
+                "♡ Abra o ChatGPT e cole sua pergunta com Ctrl + V."
             );
-
         });
-
 }
-
-
-document
-    .getElementById("user-input")
-    .addEventListener("keydown", function(event) {
-
-        if (event.key === "Enter") {
-
-            perguntarChatGPT();
-
-        }
-
-    });
