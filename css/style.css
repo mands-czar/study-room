@@ -406,3 +406,57 @@ footer {
     margin: 0;
 }
 
+/* CHECKLIST */
+
+.checklist {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.checklist-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checklist-title h2 {
+    margin-bottom: 8px;
+}
+
+.checklist-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.checklist-input input {
+    flex: 1;
+    padding: 12px;
+}
+
+.checklist-input button {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.task span {
+    flex: 1;
+}
+
+.task .concluida {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task button {
+    cursor: pointer;
+}
